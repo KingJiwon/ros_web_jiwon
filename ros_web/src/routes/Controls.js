@@ -1,8 +1,8 @@
 import ROSLIB from "roslib";
-import Control from "../components/Control";
+import Camera from "../components/Camera";
 function Controls() {
   var ros = new ROSLIB.Ros({
-    url: "ws://localhost:3030",
+    url: "ws://localhost:9090",
   });
   ros.on("connection", function () {
     document.getElementById("status").innerHTML = "Connected";
@@ -18,7 +18,11 @@ function Controls() {
 
   return (
     <div>
-      <Control />
+      <h1>Jiwon Ros Web</h1>
+      <p>
+        Connection status : <span id="status"></span>
+      </p>
+      <Camera />
     </div>
   );
 }

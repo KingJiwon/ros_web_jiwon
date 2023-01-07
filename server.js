@@ -10,7 +10,7 @@ const app = express();
 const path = require("path");
 
 app.listen(7070, function () {
-  console.log("listening on 8080");
+  console.log("listening on 7070");
 });
 
 app.use(express.static(path.join(__dirname, "/ros_web/build")));
